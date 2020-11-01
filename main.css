@@ -1,0 +1,57 @@
+.scene{
+    width: 100vw;
+    height: 100vh;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @font-face{
+    font-family: "FreestyleScript-Regular";
+    src: url("/FREESCPT.TTF") format("truetype");
+  }
+  .envelope{
+    width: 1000px;
+  }
+  #svg-envelope{
+    width: 100%;
+   
+  }
+  #topflap-open-colored path{
+    animation: fold 1.5s ease-in-out 0s 1 normal forwards; 
+  }
+  #topflap-open-colored--fade path{
+    animation: foldFade 1.5s ease-in-out 0s 1 normal forwards; 
+  }
+  #Layer_2{
+    /* width: 100%; */
+    animation: letter 2s ease-in-out 1.5s 1 normal forwards;
+  }
+      
+  @keyframes letter{
+    0%{
+      transform: translateY(0);
+    }
+    100%{
+      transform: translateY(-100px);
+    }
+  } 
+  @keyframes fold {
+    0%{
+      d: path("M687.9,1190.7c3.3,2.7,7.9,2.7,11.2,0c30.6-24.9,176.4-143.8,176.4-143.8H511.5 C511.5,1046.9,657.3,1165.8,687.9,1190.7z")
+    }
+    
+    100%{
+      d: path("M687.9,916.3c3.3-2.4,7.9-2.4,11.2,0c30.6,22.7,176.4,130.7,176.4,130.7H511.5 C511.5,1046.9,657.3,939,687.9,916.3z");
+    }
+  }
+  @keyframes foldFade {
+    0%{
+      opacity:1;
+      d: path("M687.9,1190.7c3.3,2.7,7.9,2.7,11.2,0c30.6-24.9,176.4-143.8,176.4-143.8H511.5 C511.5,1046.9,657.3,1165.8,687.9,1190.7z")
+    }
+    100%{
+      opacity: 0;
+      d: path("M687.9,916.3c3.3-2.4,7.9-2.4,11.2,0c30.6,22.7,176.4,130.7,176.4,130.7H511.5 C511.5,1046.9,657.3,939,687.9,916.3z");
+    }
+  }
